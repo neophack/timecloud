@@ -1,11 +1,12 @@
 # timecloud
   迅雷下载宝 openwrt
 #bnosereg的下载宝固件解包
-  【6-10更新】迅雷下载宝官方定制固件（Luci界面+NFS+PT+FTP+smb验证+百度云+Ngrok）
-    主机名	xiazaibao
+  【6-10更新】迅雷下载宝官方定制固件（Luci界面+NFS+PT+FTP+smb验证+百度云+Ngrok）主机名	xiazaibao
+  ```
     主机型号	XunLei Time Cloud Board
     固件版本	PandoraBox 14.09 d414a24bb66c66e2a7f30328b0bbded8cf10a05b / LuCI Trunk (0.12+svn-r1024)
     内核版本	3.14.51
+   ```
 #解包打包说明
 基于 Pandorabox 迅雷下载宝的 r1024 版。并使用 [@neophack](https://github.com/neophack) 的 [firmware-tools](https://github.com/neophack/firmware-tools) 工具进行解包，若需要打包，则需要这里的版本：[firmware-tools](https://github.com/neophack/firmware-tools).
 
