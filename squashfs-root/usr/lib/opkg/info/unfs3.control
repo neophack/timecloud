@@ -1,0 +1,16 @@
+Package: unfs3
+Version: 0.9.22-3
+Depends: libc, portmap, librpc
+Provides: 
+Source: feeds/packages/net/unfs3
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 31231
+Description:  UNFS3 is a user-space implementation of the NFSv3 server
+ specification. It provides a daemon for the MOUNT and NFS
+ protocols, which are used by NFS clients for accessing files
+ on the server.

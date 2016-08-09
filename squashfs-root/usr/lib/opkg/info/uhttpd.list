@@ -1,0 +1,4 @@
+/opt/lib/upgrade/keep.d/uhttpd
+/opt/usr/sbin/uhttpd
+/opt/etc/init.d/uhttpd
+/opt/etc/config/uhttpd

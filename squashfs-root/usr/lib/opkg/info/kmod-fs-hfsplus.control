@@ -1,0 +1,10 @@
+Package: kmod-fs-hfsplus
+Version: 3.14.51-1
+Depends: kmod-nls-base, kmod-nls-utf8
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 60881
+Description:  Kernel module for HFS+ filesystem support

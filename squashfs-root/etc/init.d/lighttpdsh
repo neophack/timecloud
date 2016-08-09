@@ -1,0 +1,26 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2015 time.xunlei.com
+
+START=98
+
+PROG=/bin/lighttpd
+PID_FILE=/var/run/lighttpd.pid
+
+start()
+{
+	${PROG} -f /etc/lighttpd.conf -m /lib
+}
+
+stop()
+{
+	killall -9 lighttpd
+	rm -f ${PID_FILE}
+}
+
+restart()
+{
+	stop
+	sleep 2
+	start
+}
+

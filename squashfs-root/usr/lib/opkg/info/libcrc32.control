@@ -1,0 +1,8 @@
+Package: libcrc32
+Version: 1
+Depends: libc
+Source: package/pandorabox/libcrc32
+Section: libs
+Architecture: ralink
+Installed-Size: 1369
+Description:  CRC32 LIB only written in C.

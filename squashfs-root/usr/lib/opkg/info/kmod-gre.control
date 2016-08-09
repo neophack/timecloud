@@ -1,0 +1,10 @@
+Package: kmod-gre
+Version: 3.14.51-1
+Depends: kmod-iptunnel
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 7842
+Description:  Generic Routing Encapsulation support

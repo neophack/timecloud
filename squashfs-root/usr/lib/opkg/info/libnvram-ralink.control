@@ -1,0 +1,8 @@
+Package: libnvram-ralink
+Version: 1
+Depends: libc
+Source: package/ralink/nvram-ralink
+Section: ralink
+Architecture: ralink
+Installed-Size: 7237
+Description:  nvram-ralink library

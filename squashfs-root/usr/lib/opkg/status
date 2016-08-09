@@ -1,0 +1,129 @@
+Package: libuci-lua
+Version: 2015-04-09.1-1
+Depends: libc, libuci, liblua
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311607
+Auto-Installed: yes
+
+Package: libiwinfo-lua
+Version: 2015-03-23-40f2844fadc05f4a4de7699dbc12fee295b7057b
+Depends: libc, libiwinfo, liblua
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311611
+Auto-Installed: yes
+
+Package: libiwinfo
+Version: 2015-03-23-40f2844fadc05f4a4de7699dbc12fee295b7057b
+Depends: libc, libnl-tiny, libuci
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311611
+Auto-Installed: yes
+
+Package: luci-theme-bootstrap
+Version: 0.12+svn-r1024-1
+Depends: libc
+Status: install ok unpacked
+Architecture: ralink
+Installed-Time: 1464311609
+Auto-Installed: yes
+
+Package: luci-app-firewall
+Version: 0.12+svn-r1024-1
+Depends: libc, firewall
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311610
+Auto-Installed: yes
+
+Package: lua
+Version: 5.1.5-1
+Depends: libc, liblua
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311607
+Auto-Installed: yes
+
+Package: ipbandwidth-app
+Version: 1
+Depends: libc, kmod-showspeed
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311607
+Auto-Installed: yes
+
+Package: kmod-showspeed
+Version: 3.14.44-1
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311608
+Auto-Installed: yes
+
+Package: luci-proto-ppp
+Version: 0.12+svn-r1024-1
+Depends: libc
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311610
+Auto-Installed: yes
+
+Package: luci-mod-admin-full
+Version: 0.12+svn-r1024-1
+Depends: libc, luci-base, ipbandwidth-app
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311605
+Auto-Installed: yes
+
+Package: luci-base
+Version: 0.12+svn-r1024-1
+Depends: libc, lua, libuci-lua, libubus-lua
+Status: install ok installed
+Architecture: ralink
+Conffiles:
+ /opt/etc/config/luci 3965dd768945143ad80e68d76c8933e4
+Installed-Time: 1464311606
+Auto-Installed: yes
+
+Package: uhttpd
+Version: 2014-10-27-fd8e5e379c23c5fbcec3e76894b839233df09067
+Depends: libc, libubox
+Status: install ok installed
+Architecture: ralink
+Conffiles:
+ /opt/etc/config/uhttpd 76707e34feb9eca63bd06fed926efd8d
+Installed-Time: 1464311603
+Auto-Installed: yes
+
+Package: luci-lib-nixio
+Version: 0.12+svn-r1024-1
+Depends: libc, luci-base
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311612
+Auto-Installed: yes
+
+Package: luci-i18n-chinese
+Version: 0.12+svn-r1024-1
+Depends: libc
+Status: install user unpacked
+Architecture: ralink
+Installed-Time: 1464313107
+
+Package: luci
+Version: 0.12+svn-r1024-1
+Depends: libc, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-theme-bootstrap, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-lib-nixio
+Status: install user installed
+Architecture: ralink
+Installed-Time: 1464311612
+
+Package: uhttpd-mod-ubus
+Version: 2014-10-27-fd8e5e379c23c5fbcec3e76894b839233df09067
+Depends: libc, uhttpd, libubus, libblobmsg-json
+Status: install ok installed
+Architecture: ralink
+Installed-Time: 1464311603
+Auto-Installed: yes
+

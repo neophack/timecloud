@@ -1,0 +1,9 @@
+Package: ufsd-tools-xunlei
+Version: 9.2
+Depends: libc
+Source: package/pandorabox/ufsd-xunlei
+Section: utils
+Maintainer: lintel<lintel.huang@gmail.com>
+Architecture: ralink
+Installed-Size: 1942282
+Description:  ufsd-tools__XunLei-mt7621

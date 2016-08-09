@@ -1,0 +1,23 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2015 time.xunlei.com
+
+START=97
+
+PROG=/bin/forceupgrade
+
+start()
+{
+	${PROG}
+}
+
+stop()
+{
+	killall -9 forceupgrade
+}
+
+restart()
+{
+	stop
+	start
+}
+

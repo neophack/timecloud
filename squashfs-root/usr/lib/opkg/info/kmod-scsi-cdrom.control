@@ -1,0 +1,10 @@
+Package: kmod-scsi-cdrom
+Version: 3.14.51-1
+Depends: kmod-scsi-core
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: ralink
+Installed-Size: 29621
+Description:  Kernel support for CD / DVD drives

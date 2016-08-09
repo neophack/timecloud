@@ -1,0 +1,15 @@
+#!/bin/sh
+
+until [ -f /tmp/etc/smb.conf ]
+do
+	sleep 1
+done
+
+if [ -f /data/UsbDisk2/Volume1/opt/etc/smb.conf ];
+then
+	cp /data/UsbDisk2/Volume1/opt/etc/smb.conf /tmp/etc/smb.conf -f
+else
+	sed -i 's/移动磁盘/UsbDisk/g' /tmp/etc/smb.conf
+	echo -e "[sdcard]\n\tpath = /data/UsbDisk2/Volume1\n\tread only = no\n\tguest ok = yes\n\tcreate mask = 0777\n\tdirectory mask = 0777\n\tbrowseable = yes" >> /tmp/etc/smb.conf
+	/etc/init.d/smbauth
+fi

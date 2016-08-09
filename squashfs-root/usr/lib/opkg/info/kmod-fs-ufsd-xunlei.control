@@ -1,0 +1,8 @@
+Package: kmod-fs-ufsd-xunlei
+Version: 3.14.51-9.2
+Depends: kmod-nls-base
+Source: package/pandorabox/ufsd-xunlei
+Section: kernel
+Architecture: ralink
+Installed-Size: 425393
+Description:  Kernel module support NTFS,HPFS. Only for mt7621 xunlei MIPS_1004Kc

@@ -1,0 +1,59 @@
+#!/bin/sh
+. /lib/functions.sh
+
+mkdir -p /opt
+
+status=`mount | grep UsbDisk2` 
+[ "$(echo $status | grep "Volume1")" != "" ] && mount -o bind /data/UsbDisk2/Volume1/opt /opt
+[ "$(echo $status | grep "Volume2")" != "" ] && mount -o bind /data/UsbDisk2/Volume2/opt /opt
+[ "$(echo $status | grep "Volume3")" != "" ] && mount -o bind /data/UsbDisk2/Volume3/opt /opt
+[ "$(echo $status | grep "Volume4")" != "" ] && mount -o bind /data/UsbDisk2/Volume4/opt /opt
+[ "$(echo $status | grep "Volume5")" != "" ] && mount -o bind /data/UsbDisk2/Volume5/opt /opt
+
+sleep 1
+
+[ ! -f /bin/python ] && ln -s /opt/bin/python2.7 /bin/python 
+[ ! -f /bin/python2 ] && ln -s /opt/bin/python2.7 /bin/python2
+
+[ ! -f /lib/ld-uClibc.so.1 ] && ln -s /opt/lib/ld-uClibc.so.1 /lib/ld-uClibc.so.1
+[ ! -f /lib/libc.so.1 ] && ln -s /opt/lib/libc.so.1 /lib/libc.so.1
+[ ! -f /lib/libm.so.1 ] && ln -s /opt/lib/libm.so.1 /lib/libm.so.1
+[ ! -f /lib/libpolarssl.so ] && ln -s /opt/lib/libpolarssl.so /lib/libpolarssl.so
+[ ! -f /lib/libstdc++.so.6 ] && ln -s /opt/lib/libstdc++.so.6 /lib/libstdc++.so.6
+
+/etc/init.d/portmap stop
+/etc/init.d/unfs3 stop
+/etc/init.d/syncy stop
+/etc/init.d/ngrokc stop
+/etc/init.d/vsftp stop
+
+option_cb(){ 
+case $1 in
+	apm)
+		status=`mount | grep UsbDisk1` 
+		[ "$(echo $status | grep "sda1")" != "" ] && hdparm -B 254 /dev/sda1
+		[ "$(echo $status | grep "sda2")" != "" ] && hdparm -B 254 /dev/sda2
+		[ "$(echo $status | grep "sda3")" != "" ] && hdparm -B 254 /dev/sda3
+		[ "$(echo $status | grep "sda4")" != "" ] && hdparm -B 254 /dev/sda4
+		[ "$(echo $status | grep "sda5")" != "" ] && hdparm -B 254 /dev/sda5
+		;;
+	nfs)
+		/etc/init.d/portmap start
+		/etc/init.d/unfs3 start
+		;;
+	syncy)
+		/etc/init.d/syncy start
+		;;
+	ngrok)
+		/etc/init.d/ngrokc start
+		;;
+	ftp)
+		/etc/init.d/vsftp start
+		;;
+	tr)
+		/opt/etc/init.d/rc.unslung start
+		;;
+esac
+}
+
+config_load autostart

@@ -1,0 +1,27 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2015 time.xunlei.com
+
+START=98
+
+PID_FILE_ETM=/var/run/xunlei.pid
+
+start()
+{
+	/bin/etm_monitor > /dev/null 2>&1 &
+}
+
+stop()
+{
+	killall -9 etm_monitor
+	killall -9 etm
+	killall -9 hubble
+	rm -f ${PID_FILE_ETM}
+	#killall -9 vod_httpserver
+}
+
+restart()
+{
+	stop
+	sleep 2
+	start
+}

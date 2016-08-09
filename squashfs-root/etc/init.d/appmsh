@@ -1,0 +1,27 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2015 time.xunlei.com
+
+START=99
+
+PROG=/bin/appmonitor
+
+start()
+{
+	${PROG}
+	logger "appmonitor start"
+}
+
+stop()
+{
+	killall -9 appmonitor
+	logger "appmonitor stop"
+}
+
+restart()
+{
+	stop
+	sleep 2
+	start
+	logger "appmonitor restart"
+}
+

@@ -1,0 +1,2 @@
+/opt/etc/uci-defaults/00_uhttpd_ubus
+/opt/usr/lib/uhttpd_ubus.so

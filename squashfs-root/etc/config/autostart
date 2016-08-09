@@ -1,0 +1,8 @@
+
+config autostart
+	option syncy '1'
+	option ngrok '1'
+	option apm '1'
+	option nfs '1'
+	option tr '1'
+	option ftp '1'

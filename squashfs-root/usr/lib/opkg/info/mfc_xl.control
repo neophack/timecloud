@@ -1,0 +1,8 @@
+Package: mfc_xl
+Version: 1
+Depends: libc, libpthread, libcrc32, iperf
+Source: package/pandorabox/mfc_xl
+Section: utils
+Architecture: ralink
+Installed-Size: 17629
+Description:  "mfc" commond  For MT7621 XunLei Timecloud only!!!

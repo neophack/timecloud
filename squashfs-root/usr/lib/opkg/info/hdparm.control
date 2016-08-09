@@ -1,0 +1,13 @@
+Package: hdparm
+Version: 9.39-1
+Depends: libc
+Provides: 
+Source: feeds/packages/utils/hdparm
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: ralink
+Installed-Size: 41548
+Description:  get/set SATA/IDE device parameters

@@ -1,0 +1,10 @@
+/etc/config/samba
+/usr/sbin/nmbd
+/etc/samba/smb.conf.template
+/etc/samba/valid.dat
+/etc/init.d/samba
+/etc/samba/upcase.dat
+/usr/sbin/smbpasswd
+/usr/sbin/smbd
+/etc/uci-defaults/uci_defaults_samba
+/etc/samba/lowcase.dat

@@ -1,0 +1,32 @@
+#!/bin/sh
+. /lib/functions.sh
+
+
+smb='0'
+smbpwd=''
+
+option_cb(){ 
+case $1 in
+	smb)
+		smb='1'
+		;;
+	smbpwd)
+		smbpwd=$2
+		;;
+esac
+}
+
+config_load autostart
+
+if [ $smb = '1' ]; then
+	smbpasswd root $smbpwd
+	sed -i 's/null passwords = yes/null passwords = no/g' /tmp/etc/smb.conf
+	sed -i 's/security = share/security = user/g' /tmp/etc/smb.conf
+	sed -i 's/guest ok = yes/guest ok = no/g' /tmp/etc/smb.conf
+
+else
+	smbpasswd -del root
+	sed -i 's/null passwords = no/null passwords = yes/g' /tmp/etc/smb.conf
+	sed -i 's/security = user/security = share/g' /tmp/etc/smb.conf
+	sed -i 's/guest ok = no/guest ok = yes/g' /tmp/etc/smb.conf
+fi

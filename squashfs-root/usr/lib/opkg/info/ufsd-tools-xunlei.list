@@ -1,0 +1,7 @@
+/usr/bin/sysdump
+/usr/bin/chkufsd
+/usr/bin/sysdump_bk
+/usr/bin/mkhfs
+/usr/bin/mkntfs
+/usr/bin/chkhfs
+/usr/bin/chkntfs

@@ -1,0 +1,26 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2015 time.xunlei.com
+
+START=98
+
+PROG=/bin/mps
+PID_FILE=/var/run/mps.pid
+
+start()
+{
+	${PROG} -r /tmp/www
+}
+
+stop()
+{
+	killall -9 mps
+	rm -f ${PID_FILE}
+}
+
+restart()
+{
+	stop
+	sleep 2
+	start
+}
+

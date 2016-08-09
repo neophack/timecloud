@@ -1,0 +1,15 @@
+
+config servers 'ngrock'
+	option host 'server.ngrok.cc'
+	option port '4443'
+
+config tunnel 'ngrok_http'
+	option server 'ngrock'
+	option type 'http'
+	option lport '88'
+	option enabled '0'
+
+config tunnel 'ngrok_tcp'
+	option server 'ngrock'
+	option type 'tcp'
+	option enabled '0'
