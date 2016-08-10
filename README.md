@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # timecloud
   迅雷下载宝 openwrt
 #bnosereg的下载宝固件解包
@@ -8,7 +9,7 @@
     内核版本	3.14.51
    ```
 #解包打包说明
-基于 Pandorabox 迅雷下载宝的 r1024 版。并使用 [@neophack](https://github.com/neophack) 的 [firmware-tools](https://github.com/neophack/firmware-tools) 工具进行解包，若需要打包，则需要这里的版本：[firmware-tools](https://github.com/neophack/firmware-tools).
+基于 bnosereg 的下载宝固件 。并使用 [@neophack](https://github.com/neophack) 的 [firmware-tools](https://github.com/neophack/firmware-tools) 工具进行解包，若需要打包，则需要这里的版本：[firmware-tools](https://github.com/neophack/firmware-tools).
 
 ```bash
 # 由于 git 不能索引空目录，所以必须还原空目录
@@ -32,3 +33,6 @@ mkdir -p \
 # 打包
 openwrt-repack.sh -R pandorabox.bin
 ```
+=======
+#timecloud
+>>>>>>> 4dbd19e337becec1976c9efdc115720e4db2b70e
